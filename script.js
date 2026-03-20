@@ -541,8 +541,8 @@ function showFakeErrorScreen() {
 
 <span class="text-red">T-VIRUS INFECTION: 100%</span> <br>
 
-GIGGLE... jk.. This is your birthday, not a horror movie. <br>
-Time to solve those puzzles before anything "bad" happens! 🤑 <br>
+GIGILLE.. dud were not in a horror movie..... of CORUSE im joking.. maybe <br>
+Time to solve those puzzles before anything "bad" happens! 🥶🥶 <br>
 
 <span class="text-yellow">Hint: Type 'solve password' if you haven't already!</span>
     `);
