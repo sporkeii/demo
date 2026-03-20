@@ -189,7 +189,7 @@ The final puzzle awaits. Type 'solve cipher'
 to unlock the birthday vault and cure yourself
 of the T-Virus! <br>
 
-<span class="text-dim">P.S. - You're doing great! :)</span>
+<span class="text-dim">P.S. - You're doing great! :D </span>
             `,
     };
 
@@ -209,13 +209,13 @@ of the T-Virus! <br>
   examine: () => {
     const items = [
       "A flickering computer terminal <br> ",
-      "Bloodstains on the floor (don't worry, it's just birthday cake) <br>",
+      "Bloodstains on the floor (don't worry, it's just birthday cake :p) <br>",
       "A locked metal door with a keypad <br>",
     ];
 
     if (!gameState.foundItems.includes("keycard")) {
       items.push(
-        '<span class="text-yellow">A KEYCARD hidden under papers</span>',
+        '<span class="text-yellow">A KEYCARD hidden under papers <br></span>',
       );
       gameState.foundItems.push("keycard");
       addToInventory("keycard", "Security Keycard - Might unlock something");
