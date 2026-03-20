@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT: BIRTHDAY PROTOCOL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="crt-overlay"></div>
+    <div class="scanlines"></div>
+
+    <!-- Warning Screen -->
+    <div id="warning-screen" class="screen active">
+        <div class="warning-box">
+            <div class="warning-header">⚠ UMBRELLA CORPORATION SECURE TERMINAL ⚠</div>
+            <div class="warning-body">
+                <p class="glitch-text">UNAUTHORIZED ACCESS DETECTED</p>
+                <p>BIOMETRIC SCAN: <span class="text-green">AUTHORIZED</span></p>
+                <p>SUBJECT ID: <span class="text-red">BIRTHDAY_PROTOCOL_2026</span></p>
+                <p>STATUS: <span class="text-yellow">CONTAINMENT BREACH</span></p>
+                <div class="warning-message">
+                    <p>You wake up in a cold, dimly lit room.</p>
+                    <p>The air smells of metal and decay.</p>
+                    <p>A computer terminal flickers before you.</p>
+                    <p>Something feels.. wrong.</p>
+                </div>
+                <button id="start-btn" class="terminal-btn">INITIALIZE SYSTEM</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Game Screen -->
+    <div id="game-screen" class="screen">
+        <div class="game-container">
+            <div class="header">
+                <div class="header-left">
+                    <div class="location">LOCATION: LABORATORY - SECTOR 7</div>
+                    <div class="objective" id="objective">OBJECTIVE: Investigate the terminal</div>
+                </div>
+                <div class="header-right">
+                    <div class="virus-container">
+                        <div class="virus-label">T-VIRUS EXPOSURE</div>
+                        <div class="virus-bar">
+                            <div class="virus-fill" id="virus-fill"></div>
+                        </div>
+                        <div class="virus-percent" id="virus-percent">0%</div>
+                    </div>
+                    <div class="save-indicator">
+                        💾 <span id="save-text">Auto-Save Enabled</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <div class="left-panel">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <span>SECURE TERMINAL v2.1.4</span>
+                            <span class="blink">█</span>
+                        </div>
+                        <div class="terminal-body" id="terminal-output"></div>
+                        <div class="terminal-input-area">
+                            <span class="text-green">&gt;</span>
+                            <input type="text" id="terminal-input" class="terminal-input" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-panel">
+                    <div class="inventory-window">
+                        <div class="inventory-header">INVENTORY / FILES</div>
+                        <div class="inventory-body" id="inventory">
+                            <div class="inventory-empty">NO ITEMS</div>
+                        </div>
+                    </div>
+
+                    <div class="puzzle-window" id="puzzle-window" style="display: none;">
+                        <div class="puzzle-header">
+                            <span id="puzzle-title">PUZZLE</span>
+                            <button class="close-btn" onclick="closePuzzle()">✕</button>
+                        </div>
+                        <div class="puzzle-body" id="puzzle-content"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-bar">
+                <button class="action-btn" onclick="showHelp()">
+                    <span class="key-hint">[H]</span> HELP
+                </button>
+                <button class="action-btn" onclick="saveGame()">
+                    <span class="key-hint">[S]</span> SAVE
+                </button>
+                <button class="action-btn" onclick="examineRoom()">
+                    <span class="key-hint">[E]</span> EXAMINE
+                </button>
+                <button class="action-btn" onclick="toggleInventory()">
+                    <span class="key-hint">[I]</span> INVENTORY (<span id="item-count">0</span>)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Victory Screen -->
+    <div id="victory-screen" class="screen">
+        <div class="victory-container">
+            <div class="victory-header glitch-text">CONTAINMENT BREACH NEUTRALIZED</div>
+            <div class="victory-body">
+                <div class="birthday-message">
+                    <h1 class="text-green typewriter">HAPPY BIRTHDAY!</h1>
+                    <div class="message-content">
+                        <p>You survived the T-Virus outbreak...</p>
+                        <p>But the real gift was the puzzles you solved along the way.</p>
+                        <br>
+                        <p class="personal-message">
+                            Dear Zoey,<br><br>
+                            Another year older (HAH unc), another biohazard protocol escaped!<br>
+                            You've proven once again that no puzzle is too cryptic,<br>
+                            no virus too infectious, and no birthday too ordinary.<br><br>
+                            Hope your year ahead be filled with adventures,<br>
+                            health potions, and save points at exactly the right moments.<br><br>
+                            <span class="text-yellow">- From, Cae :3</span>
+                        </p>
+                        <br>
+                        <div class="gift-section">
+                            <div class="gift-label">🎁 DIGITAL GIFT UNLOCKED 🎁</div>
+                            <p class="text-green">Your prize: A year of unforgettable memories!</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="terminal-btn" onclick="location.reload()">PLAY AGAIN</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="glitch-overlay" id="glitch-overlay"></div>
+    <script src="script.js"></script>
+</body>
+</html>
